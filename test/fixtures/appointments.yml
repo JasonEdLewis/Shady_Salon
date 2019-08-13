@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: one
+  stylist: one
+  time: 1
+
+two:
+  client: two
+  stylist: two
+  time: 1
