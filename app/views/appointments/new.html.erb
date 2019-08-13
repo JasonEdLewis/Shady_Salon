@@ -1,0 +1,15 @@
+<h2>New Appointment Page</h2>
+
+
+<%= form_for(@appointment) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :client_id %> 
+
+    <%= f.label :Stylist %>
+    <%= f.collection_select(:stylist_id, Stylist.all, :id , :name) %>
+    <%= f.label :Time %>
+    <%= f.collection_select(:stylist_id, Stylist.all, :time, "1...7") %>
+   
+
+<% end %>

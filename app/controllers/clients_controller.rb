@@ -7,7 +7,7 @@ class ClientsController < ApplicationController
     end
 
     def show
-
+        
     end
     
 
@@ -36,7 +36,7 @@ class ClientsController < ApplicationController
     end
     private
     def client_params
-        params.(:client).permit(:name, :gender, :age)
+        params.require(:client).permit(:name, :age, :gender)
     end
 
 end

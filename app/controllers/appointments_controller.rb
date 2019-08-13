@@ -4,8 +4,12 @@ class AppointmentsController < ApplicationController
         @appointments = Appointment.all
     end
 
-    def new
+    def show
         @appointment = Appointment.find(params[:id])
+    end
+    def new
+        @appointment = Appointment.new
+        @stylists =  Stylist.all
     end
 
     def create
@@ -24,7 +28,8 @@ class AppointmentsController < ApplicationController
     private
 
     def app_params
-        params.(:appointment).permit(:client, :stylist, :time)
+       
+        params.require(:appointment).permit(:client_id, :stylist_id )
     end
 
 

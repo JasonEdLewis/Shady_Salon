@@ -1,0 +1,22 @@
+
+
+
+<h2>Want to Experience the Great Service from Shady's Best Stylist?</h2>
+
+
+
+
+
+<%= form_for(@client) do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> 
+  
+<%= f.label :Age %>
+<%= f.text_field :age %>
+
+<%= f.label :Gender %>
+<%= f.text_field :gender %>
+
+<%= f.submit "Become Client" %>
+<% end %>
